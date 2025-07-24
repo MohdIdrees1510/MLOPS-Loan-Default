@@ -65,3 +65,15 @@ class ModelTrainerConfig:
     _learning_rate: float = MODEL_TRAINER_LEARNING_RATE
     _random_state: int = MODEL_TRAINER_RANDOM_STATE
     _eval_metric: str = MODEL_TRAINER_EVAL_METRIC
+
+
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+    bucket_name: str = MODEL_BUCKET_NAME
+    s3_model_key_path: str = MODEL_FILE_NAME
+
+@dataclass
+class ModelPusherConfig:
+    bucket_name: str = MODEL_BUCKET_NAME
+    s3_model_key_path: str = MODEL_FILE_NAME
